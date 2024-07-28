@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>LeslyCodes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="background-image"></div>
+		
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<section class="topnav">
+							<div id="name"> Lesly Catota Lopez </div>
+							<!-- <img src="images/logo1.png" alt="" width="60" height="60"/> -->
+							<div id="menu">
+							  <ul>
+								<li><a href="https://www.linkedin.com/in/lesly-catota-lopez-9a5110256/" class="active"> LinkedIn </a></li>
+								<li id="separators">|</li>
+								<li><a href = "https://github.com/leslyclopez11" class ="active"> Github </a></li>
+								<li id="separators">|</li>
+								<li><a href="https://docs.google.com/document/d/14NLoGjDF2sjUiN9DyGh7aAoIDeQNA-PBDPvg7ASazbA/edit" target="_blank" rel="noopener noreferrer" download> Resume </a></li>
+							  </ul>
+							</div>
+						</section>
+						<section class="welcomeSection" id="welcomeSection">
+							<!-- <h1>Hello World!</h1> -->
+							<div class="commandBox">
+								<p>
+									<span style="color:#ed76e7">$ Welcome/Bienvenidos 💌</span><br><br>
+									<span style="color:#ed76e7">$</span> I'm <span style="color:#ed76e7">[Lesly]</span>, a passionate Computer Science student specializing in <span style="color:#ed76e7">[Software Engineering]</span>.<br><br>
+									<span style="color:#ed76e7">$</span> Here, you'll find a showcase of my <span style="color:#ed76e7">    [skills🤸🏻‍♀️, projects👩🏻‍💻, and experiences🌱]</span> that highlight my journey in the tech world.<br><br>
+									<span style="color:#ed76e7">$</span> Feel free to look around and connect with me!🐥
+								</p>
+								<p>
+									<span style="font-weight: normal; font-size: 14px;">Try typing <span style="color:#ed76e7">[cd section name(all lower case)]</span> to see a section! </span>
+								</p>
+								<form id="userForm" onsubmit="handleCommand(event)">
+									<div id="userInputContainer">
+										<span style="color:#ed76e7">$</span><input type="text" id="userInput" name="section" placeholder="Type a command here..." required>
+									</div>
+								</form>
+								</div>
+								</section>
+								<script>
+								
+									function handleCommand(event) {
+										event.preventDefault();
+										const userInput = document.getElementById('userInput').value.trim().toLowerCase();
+										const [command, sectionName] = userInput.split(' ');
+
+										if (command === 'cd' && sectionName) {
+											let sectionId;
+
+											if (sectionName === 'about' || sectionName === 'about me') {
+												sectionId = 'about me'; 
+											} else if (sectionName === 'skills') {
+												sectionId = 'skills'; 
+											} else {
+												sectionId = sectionName.toLowerCase();
+											}
+
+											const sectionElement = document.getElementById(sectionId);
+											if (sectionElement) {
+												sectionElement.scrollIntoView({ behavior: 'smooth' });
+											} else {
+												alert(`Section '${sectionName}' not found.`);
+											}
+										} else {
+											alert('Unknown command format. Please use "cd section-name".');
+										}
+										document.getElementById('userInput').value = '';
+									}
+
+								  </script>
+					
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						
+						<!-- Introduction -->
+							<section id="about me" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>ABOUT ME</h2>
+										</header>
+										<p>Hello, I'm Lesly, an upcoming senior at Swarthmore College majoring in Computer 
+											Science and Applied Mathematics. I have a strong passion for learning and leveraging 
+											technology to make a positive impact. Currently, I am actively involved in Develop for Good, 
+											an organization that merges technology with initiatives aimed at social good.</p>
+										<!-- <ul class="actions">
+											<li><a href="generic.html" class="button">Learn More</a></li>
+										</ul> -->
+									</div>
+									<span class="image"><img src="images/hello.png" alt="" /></span>
+								</div>
+							</section>
+
+						<!-- First Section -->
+							<section id="skills" class="main special">
+								<header class="major">
+									<h2>SKILLS</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-code"></span>
+										<h3>LANGUAGES</h3>
+										<ul class="languages">
+											<li>Python</li>
+											<li>C/C++</li>
+											<li>Java</li>
+											<li>HTML</li>
+											<li>JavaScript</li>
+											<li>CSS</li>
+										</ul>
+									</li>
+									<li>
+										<span class="icon major style3 fa-copy"></span>
+										<h3>FRAMEWORKS</h3>
+										<ul class = "frameworks">
+											<li>Node.js</li>
+											<li>Express.js</li>
+											<li>MongoDB</li>
+											<li>Android</li>
+											<li>Figma</li>
+											<li>Wordpress</li>
+											<li>Divi</li>
+										</ul>
+									</li>
+									<li>
+										<span class="icon major style5 fa-gem"></span>
+										<h3>SOFT SKILLS</h3>
+										<ul class = "softskills">
+											<li>Communication</li>
+											<li>Problem-solving</li>
+											<li>Teamwork</li>
+											<li>Time Management</li>
+											<li>Adaptability</li>
+										</ul>
+									</li>
+								</ul>
+							
+							</section>
+
+						<!-- Second Section -->
+						<section id="experience" class="main special">
+							<header class="major">
+								<h2>EXPERIENCE</h2>
+							</header>
+							
+							<div class="experience-item">
+								<div class="experience-details">
+									<h3>Software Engineer Fellow</h3>
+									<p><strong>Headstarter AI</strong></p>
+									<p>Jul 2024 - Present</p>
+									<p>Ongoing</p>
+								</div>
+							</div>
+							
+							<div class="experience-item">
+								<div class="experience-details">
+									<h3>Frances Velay Science Research Fellow</h3>
+									<p><strong>Swarthmore College</strong></p>
+									<p>May 2024 - Present</p>
+									
+								</div>
+								<div class="experience-description">
+									<ul>
+										<li>Explored and applied various software design principles, including flexibility, extensibility, and security.</li>
+										<li>Analyzed and implemented design patterns and identified common anti-patterns to improve software architecture.</li>
+										<li>Utilized fault-based testing and debugging techniques to identify and resolve software defects.</li>
+										<li>Investigated and employed effective refactoring techniques to address code smells and enhance software maintainability.</li>
+										<li>Developed advanced skills in evaluating and improving the quality of existing software systems.</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="experience-item">
+								<div class="experience-details">
+									<h3>Product Designer @ SwimEngland</h3>
+									<p><strong>Develop for Good</strong></p>
+									<p>Apr 2024 - Present</p>
+									<p>Ongoing</p>
+								</div>
+								
+							</div>
+							
+							<div class="experience-item">
+								<div class="experience-details">
+									<h3>Mathematics Tutor</h3>
+									<p><strong>Stigmi Learning</strong></p>
+									<p>May 2024 - Present</p>
+									
+								</div>
+								<div class="experience-description">
+									<ul>
+										<li>Produced 30-45 minute instructional videos for up to 3 math problem sets per session, tailored for 4th and 5th-grade students.</li>
+										<li>Employed effective teaching techniques to break down complex math concepts into manageable and understandable parts.</li>
+										<li>Organized and structured video content to align with educational standards and curriculum requirements.</li>
+										<li>Created detailed diagrams and visual aids to enhance comprehension and illustrate problem-solving steps.</li>
+									</ul>
+									
+								</div>
+							</div>
+							
+							<div class="experience-item">
+								<div class="experience-details">
+									<h3>Restaurant Hostess</h3>
+									<p><strong>Carmines di Vega</strong></p>
+									<p>Jun 2022 - Present</p>
+									
+								</div>
+								<div class="experience-description">
+									<ul>
+										<li>Provided excellent customer service, greeting and seating guests in a friendly and professional manner.</li>
+										<li>Efficiently managed restaurant reservations, ensuring optimal seating arrangements and balanced workload distribution among wait staff.</li>
+										<li>Maintained an organized and up-to-date seating chart, preventing server overload and enhancing customer satisfaction.</li>
+										<li>Coordinated with kitchen and wait staff to manage to-go orders, ensuring timely and accurate preparation.</li>
+									</ul>
+								</div>
+							</div>
+						
+						
+						</section>
+
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+						<h2>Contact Info</h2>
+						<dl class="alt">
+							<dt>Address</dt>
+							<dd>New Haven, CT</dd>
+							<dt>Email</dt>
+							<dd><a href="mailto:leslyclopez11@gmail.com">leslyclopez11@gmail.com</a></dd>
+						</dl>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+						</ul>
+					</section>
+					
+					<p class="copyright">&copy; 2024 Lesly. All rights reserved.</p>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+		
+			<script src="assets/js/sendemail.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+	
+</html>
